@@ -19,6 +19,7 @@ class Transaction extends Migration
             $table->timestamp('transaction_date')->useCurrent();
             $table->string('method');
             $table->string('card_number');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

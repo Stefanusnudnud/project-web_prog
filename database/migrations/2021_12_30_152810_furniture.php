@@ -18,6 +18,7 @@ class Furniture extends Migration
             $table->id();
             $table->string('name');
             $table->string('price');
+            $table->unsignedBigInteger('type_id');
             $table->foreign('type_id')->references('id')->on('furnitureType');
             $table->string('color');
             $table->string('file_name');
